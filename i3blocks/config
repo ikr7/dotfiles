@@ -1,0 +1,25 @@
+[arch-updates]
+command=~/.scripts/arch-updates.sh
+interval=3600
+
+[disk]
+command=~/.scripts/disk.sh
+interval=60
+
+[ip]
+command=~/.scripts/ip.sh
+INTERFACE=enp37s0
+interval=once
+
+[insync]
+command=~/.scripts/insync.sh
+interval=5
+
+[volume]
+command=~/.scripts/get-volume.sh
+signal=10
+interval=once
+
+[datetime]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1

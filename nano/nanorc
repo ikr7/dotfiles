@@ -1,0 +1,5 @@
+# Reference: https://www.nano-editor.org/dist/v4/nanorc.5.html
+
+set autoindent
+set linenumbers
+set tabsize 4
