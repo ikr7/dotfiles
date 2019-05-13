@@ -1,6 +1,4 @@
-if [ ! -d ~/.config ]; then
-	mkdir ~/.config
-fi
+mkdir -p ~/.config
 
 ln -s $PWD/dunst ~/.config/dunst
 ln -s $PWD/fontconfig ~/.config/fontconfig
