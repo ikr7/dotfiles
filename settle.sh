@@ -9,6 +9,8 @@ ln -s $PWD/i3blocks ~/.config/i3blocks
 ln -s $PWD/nano ~/.config/nano
 ln -s $PWD/zsh ~/.config/zsh
 
+ln -s $PWD/zsh/zshenv-home ~/.zshenv
+
 ln -s $PWD/scripts ~/.scripts
 
 ln -s $PWD/desktop-entries/reboot.desktop ~/.local/share/applications/reboot.desktop
