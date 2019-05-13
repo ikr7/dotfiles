@@ -94,12 +94,5 @@ mode "resize" {
 # go resize mode
 bindsym $mod+r mode "resize"
 
-# bar config
-bar {
-	status_command i3blocks
-	separator_symbol " | "
-	position top
-}
-
 # Autostart App
 exec --no-startup-id dex --autostart

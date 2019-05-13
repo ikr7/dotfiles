@@ -13,3 +13,10 @@ bindsym XF86MonBrightnessUp exec xbacklight +3 -steps 1 -time 0 && pkill -SIGRTM
 bindsym XF86AudioLowerVolume exec pamixer --decrease 5 && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioRaiseVolume exec pamixer --increase 5 && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioMute exec pamixer --toggle-mute && pkill -SIGRTMIN+10 i3blocks
+
+# bar config
+bar {
+	status_command i3blocks
+	separator_symbol " | "
+	position top
+}

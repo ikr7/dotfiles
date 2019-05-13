@@ -9,3 +9,10 @@ font pango:Monospace 16
 bindsym $mod+bracketleft exec pamixer --decrease 5 && pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+bracketright exec pamixer --increase 5 && pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+p exec pamixer --toggle-mute && pkill -SIGRTMIN+10 i3blocks
+
+# bar config
+bar {
+	status_command i3blocks
+	separator_symbol " | "
+	position top
+}
