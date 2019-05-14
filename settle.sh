@@ -1,5 +1,7 @@
 #! /usr/bin/bash
 
+cd $(dirname $0)
+
 mkdir -p ~/.config
 
 ln -s $PWD/dunst ~/.config/dunst
