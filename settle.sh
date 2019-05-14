@@ -12,7 +12,11 @@ cat "$PWD/i3/config-common" > $PWD/builds/i3/config
 cat "$PWD/i3/envs/config-$HOSTNAME" >> $PWD/builds/i3/config
 ln -s "$PWD/builds/i3" ~/.config/i3
 
-ln -s $PWD/i3blocks ~/.config/i3blocks
+mkdir -p $PWD/builds/i3blocks
+cat "$PWD/i3blocks/config-common" > $PWD/builds/i3blocks/config
+cat "$PWD/i3blocks/envs/config-$HOSTNAME" >> $PWD/builds/i3blocks/config
+ln -s "$PWD/builds/i3blocks" ~/.config/i3blocks
+
 ln -s $PWD/nano ~/.config/nano
 ln -s $PWD/zsh ~/.config/zsh
 
