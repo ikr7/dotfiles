@@ -28,3 +28,4 @@ ln -s $PWD/desktop-entries/reboot.desktop ~/.local/share/applications/reboot.des
 ln -s $PWD/desktop-entries/screenshot.desktop ~/.local/share/applications/screenshot.desktop
 ln -s $PWD/desktop-entries/shutdown.desktop ~/.local/share/applications/shutdown.desktop
 ln -s $PWD/desktop-entries/suspend.desktop ~/.local/share/applications/suspend.desktop
+ln -s $PWD/desktop-entries/lock-screen.desktop ~/.local/share/applications/lock-screen.desktop
