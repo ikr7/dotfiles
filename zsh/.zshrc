@@ -1,4 +1,4 @@
-
+LANG=en_US.UTF-8
 PATH=$HOME/bin:$PATH
 
 HISTFILE=$ZDOTDIR/.zsh_history
