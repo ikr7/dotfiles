@@ -6,6 +6,7 @@ Here's how I configure my Linux system(s)
 
 - `achikita` is for my desktop PC
 - `mononobe` is for my laptop (ThinkPad T470s)
+- `amemori` is for my 2nd desktop PC (DeskMini NUC, for lab)
 
 ## Install
 
