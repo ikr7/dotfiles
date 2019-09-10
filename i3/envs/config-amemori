@@ -15,4 +15,6 @@ bar {
 	status_command i3blocks
 	separator_symbol " | "
 	position top
+	tray_output DP2
+	tray_output HDMI2
 }
