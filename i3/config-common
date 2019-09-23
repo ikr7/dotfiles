@@ -11,7 +11,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # App Launcher
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -i -l 50 -fn Ricty-16"
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -i -l 50 -fn Monospace-16"
 
 # change focus
 bindsym $mod+h focus left

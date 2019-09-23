@@ -1,9 +1,11 @@
-
+LANG=en_US.UTF-8
 PATH=$HOME/bin:$PATH
 
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
+
+export GIT_EDITOR=nano
 
 # ignore duplicates in history
 setopt hist_ignore_dups
