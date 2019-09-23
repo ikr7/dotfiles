@@ -6,10 +6,6 @@ interval=3600
 command=~/.scripts/disk.sh
 interval=60
 
-[insync]
-command=~/.scripts/insync.sh
-interval=5
-
 [battery]
 command=~/.scripts/battinfo.py
 interval=60
