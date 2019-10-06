@@ -18,8 +18,6 @@ $ ./settle.sh
 
 ## Update
 
-Note: Delete all symlinks manually before updating.
-
 ```
 $ cd ~/.dotfiles
 $ git pull
