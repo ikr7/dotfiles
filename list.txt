@@ -1,0 +1,13 @@
+dunst,.config/dunst
+fontconfig,.config/fontconfig
+builds/i3,.config/i3
+builds/i3blocks,.config/i3blocks
+nano,.config/nano
+zsh,.config/zsh
+home/zshenv,.zshenv
+scripts,.scripts
+desktop-entries/reboot.desktop,.local/share/applications/reboot.desktop
+desktop-entries/screenshot.desktop,.local/share/applications/screenshot.desktop
+desktop-entries/shutdown.desktop,.local/share/applications/shutdown.desktop
+desktop-entries/suspend.desktop,.local/share/applications/suspend.desktop
+desktop-entries/lock-screen.desktop,.local/share/applications/lock-screen.desktop
