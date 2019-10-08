@@ -7,11 +7,11 @@ mkdir -p ~/.config
 echo -n "Building configs ... "
 
 mkdir -p $PWD/builds/i3
-cat "$PWD/i3/config-common" >> $PWD/builds/i3/config
+cat "$PWD/i3/config-common" > $PWD/builds/i3/config
 cat "$PWD/i3/envs/config-$HOSTNAME" >> $PWD/builds/i3/config
 
 mkdir -p $PWD/builds/i3blocks
-cat "$PWD/i3blocks/config-common" >> $PWD/builds/i3blocks/config
+cat "$PWD/i3blocks/config-common" > $PWD/builds/i3blocks/config
 cat "$PWD/i3blocks/envs/config-$HOSTNAME" >> $PWD/builds/i3blocks/config
 
 echo "done."
