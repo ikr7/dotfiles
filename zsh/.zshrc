@@ -45,7 +45,6 @@ alias ga="git add"
 alias gc="git commit"
 
 alias ..="cd .."
-alias code="code-insiders"
 
 alias venv="python -m venv"
 
