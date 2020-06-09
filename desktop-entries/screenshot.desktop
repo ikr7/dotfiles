@@ -4,4 +4,4 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=ScreenShot
-Exec=maim -s | xclip -selection clipboard -t image/png
+Exec=maim -su | xclip -selection clipboard -t image/png
