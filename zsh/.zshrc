@@ -1,5 +1,7 @@
 LANG=en_US.UTF-8
 PATH=$HOME/bin:$PATH
+PATH=$HOME/.cargo/bin:$PATH
+
 
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
@@ -35,14 +37,15 @@ zstyle ':completion:*' menu select
 # Exa instead of ls #
 #####################
 
-alias ls="exa --long --group --header --binary --time-style=long-iso"
-alias ll="exa --long --group --header --binary --time-style=long-iso"
-alias la="exa --long --group --header --binary --time-style=long-iso --all"
+alias ls="exa --long --group --header --binary --time-style=long-iso --git"
+alias ll="exa --long --group --header --binary --time-style=long-iso --git"
+alias la="exa --long --group --header --binary --time-style=long-iso --all --git"
 
 alias g="git"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
+alias gd="git diff"
 
 alias ..="cd .."
 
@@ -59,51 +62,62 @@ take() {
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-############################
-# "Command not found" hook #
-############################
-
-source /usr/share/doc/pkgfile/command-not-found.zsh
-
-_insync-headless () {
-	_values 'mode' \
-	'accept_all_new_shares' \
-	'accept_share' \
-	'add_account' \
-	'force_sync' \
-	'get_account_information' \
-	'get_actions_required' \
-	'get_domain_link' \
-	'get_errors' \
-	'get_file_status' \
-	'get_link' \
-	'get_new_shares' \
-	'get_proxy' \
-	'get_recent_changes' \
-	'get_root_drive_files' \
-	'get_status' \
-	'get_sync_progress' \
-	'hide' \
-	'manage_ignore_list' \
-	'manage_selective_sync' \
-	'move_folder' \
-	'open_in_gdrive' \
-	'pause_syncing' \
-	'quit' \
-	'reject_all_new_shares' \
-	'reject_share' \
-	'remove_account' \
-	'remove_from_insync' \
-	'resume_syncing' \
-	'retry_errors' \
-	'set_autostart' \
-	'set_export_option' \
-	'set_proxy' \
-	'set_selective_sync' \
-	'share' \
-	'show' \
-	'start' \
-	'toggle' \
+_change-alacritty-color () {
+	_values 'moooode' \
+	'_comp' \
+	'afterglow' \
+	'argonaut' \
+	'ayu_dark' \
+	'base16_dark' \
+	'blood_moon' \
+	'breeze' \
+	'campbell' \
+	'challenger_deep' \
+	'Cobalt2' \
+	'cyber_punk_neon' \
+	'darcula' \
+	'dark_pastels' \
+	'doom_one' \
+	'dracula' \
+	'falcon' \
+	'flat_remix' \
+	'gotham' \
+	'gruvbox_dark' \
+	'gruvbox_light' \
+	'gruvbox_material' \
+	'high_contrast' \
+	'horizon-dark' \
+	'hyper' \
+	'iterm_default' \
+	'konsole_linux' \
+	'low_contrast' \
+	'material_theme' \
+	'material_theme_mod' \
+	'nord' \
+	'oceanic_next' \
+	'omni' \
+	'one_dark' \
+	'palenight' \
+	'papercolor_light' \
+	'pencil_dark' \
+	'pencil_light' \
+	'remedy_dark' \
+	'snazzy' \
+	'solarized_dark' \
+	'solarized_light' \
+	'taerminal' \
+	'tango_dark' \
+	'tender' \
+	'terminal_app' \
+	'thelovelace' \
+	'tokyo-night' \
+	'tokyo-night-storm' \
+	'tomorrow_night' \
+	'tomorrow_night_bright' \
+	'wombat' \
+	'xterm' \
+	'colors' \
 }
 
-compdef _insync-headless insync-headless
+compdef _change-alacritty-color change-alacritty-color
+	
