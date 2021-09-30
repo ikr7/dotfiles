@@ -1,6 +1,10 @@
 # Super as $mod
 set $mod Mod4
 
+gaps inner 10
+gaps outer 10
+default_border pixel 5
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
