@@ -1,0 +1,4 @@
+set $mod Mod4
+default_border pixel 5
+
+bindsym $mod+Return exec alacrity
