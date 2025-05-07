@@ -1,7 +1,8 @@
 LANG=en_US.UTF-8
-PATH=$HOME/bin:$PATH
-PATH=$HOME/.cargo/bin:$PATH
 
+PATH=$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
+PATH=node_modules/.bin:$PATH
 
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
@@ -24,6 +25,8 @@ setopt correct
 # complete hidden files
 setopt globdots
 
+setopt hist_ignore_space
+
 autoload -U colors && colors
 autoload -U compinit && compinit
 autoload -U promptinit && promptinit
@@ -44,16 +47,33 @@ alias la="exa --long --group --header --binary --time-style=long-iso --all --git
 alias g="git"
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit"
-alias gd="git diff"
+alias gc="git commit -m"
+alias gd="git diff --ignore-all-space"
+alias gw="git switch"
+alias gg="git grep"
 
 alias ..="cd .."
 
 alias venv="python -m venv"
 
+alias dc="docker-compose"
+
 take() {
 	mkdir $1
 	cd $1
+}
+
+ro() {
+	test "$PWD" = "$HOME/Workspace" || test "$PWD" = "$HOME" && return
+	test -d .git && return
+	cd ..
+	ro
+}
+
+retry () {
+	while ! "${@:2}"; do
+		sleep $1
+	done
 }
 
 #####################
@@ -62,62 +82,23 @@ take() {
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-_change-alacritty-color () {
-	_values 'moooode' \
-	'_comp' \
-	'afterglow' \
-	'argonaut' \
-	'ayu_dark' \
-	'base16_dark' \
-	'blood_moon' \
-	'breeze' \
-	'campbell' \
-	'challenger_deep' \
-	'Cobalt2' \
-	'cyber_punk_neon' \
-	'darcula' \
-	'dark_pastels' \
-	'doom_one' \
-	'dracula' \
-	'falcon' \
-	'flat_remix' \
-	'gotham' \
-	'gruvbox_dark' \
-	'gruvbox_light' \
-	'gruvbox_material' \
-	'high_contrast' \
-	'horizon-dark' \
-	'hyper' \
-	'iterm_default' \
-	'konsole_linux' \
-	'low_contrast' \
-	'material_theme' \
-	'material_theme_mod' \
-	'nord' \
-	'oceanic_next' \
-	'omni' \
-	'one_dark' \
-	'palenight' \
-	'papercolor_light' \
-	'pencil_dark' \
-	'pencil_light' \
-	'remedy_dark' \
-	'snazzy' \
-	'solarized_dark' \
-	'solarized_light' \
-	'taerminal' \
-	'tango_dark' \
-	'tender' \
-	'terminal_app' \
-	'thelovelace' \
-	'tokyo-night' \
-	'tokyo-night-storm' \
-	'tomorrow_night' \
-	'tomorrow_night_bright' \
-	'wombat' \
-	'xterm' \
-	'colors' \
+_alacritty-colorscheme () {
+	local -a cmds
+	if (( CURRENT == 2 )); then
+		cmds=('list' 'update' 'upgrade' 'commit')
+		_describe -t commands "subcommand" cmds
+	else
+		_values $(alacritty-colorscheme list)
+	fi
 }
 
-compdef _change-alacritty-color change-alacritty-color
+compdef _alacritty-colorscheme alacritty-colorscheme
 	
+_notify-send() {
+	_arguments \
+		{-?,--help} \
+		{-u,--urgency}'::_values a v c' \
+		'*::'
+}
+
+compdef _notify-send notify-send
