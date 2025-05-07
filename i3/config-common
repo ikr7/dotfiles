@@ -100,3 +100,6 @@ bindsym $mod+r mode "resize"
 
 # Autostart App
 exec --no-startup-id dex --autostart
+
+exec --no-startup-id start-pulseaudio-x11
+exec_always --no-startup-id picom
