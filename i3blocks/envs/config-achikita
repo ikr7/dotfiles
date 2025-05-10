@@ -6,9 +6,13 @@ interval=3600
 command=~/.scripts/disk.sh
 interval=60
 
+[gpu]
+command=~/.scripts/gpu.sh
+interval=10
+
 [ip]
 command=~/.scripts/ip.sh
-INTERFACE=eno1
+INTERFACE=enp9s0
 interval=once
 
 [volume]
