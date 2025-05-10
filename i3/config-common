@@ -1,21 +1,21 @@
 # Super as $mod
 set $mod Mod4
 
-gaps inner 10
+gaps inner 5
 gaps outer 0
-default_border pixel 5
+default_border pixel 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ${HOME}/bin/alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # App Launcher
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -i -l 50 -fn Monospace-16"
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -i -l 50 -fn Monospace-12"
 
 # change focus
 bindsym $mod+h focus left
